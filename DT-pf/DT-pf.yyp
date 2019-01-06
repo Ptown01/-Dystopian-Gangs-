@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "4ff253d0-9c4b-409e-98b9-5346420932f3",
+            "Value": {
+                "id": "f5079b2a-0816-46d8-bd62-9fd6868d576a",
+                "resourcePath": "objects\\obj_chatbox\\obj_chatbox.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "5e22a096-e4db-42e9-9f40-6765d08232ad",
             "Value": {
                 "id": "fa1c336d-2d44-4637-82e4-ee9f64438b9f",
