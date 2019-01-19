@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "47142dda-6d9d-4d60-837b-725b940a1dfb",
+            "Value": {
+                "id": "db6feb45-5009-473c-b47f-471d4c6d9be2",
+                "resourcePath": "extensions\\ext_whs\\ext_whs.yy",
+                "resourceType": "GMExtension"
+            }
+        },
+        {
             "Key": "4baa1a69-ed25-485a-bae1-d072af20b062",
             "Value": {
                 "id": "17439c15-561b-4c2a-8a1c-3c16cd1c3b11",
