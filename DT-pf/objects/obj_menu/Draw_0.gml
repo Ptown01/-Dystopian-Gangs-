@@ -13,7 +13,12 @@ for (i = 0; i < max_buttons; i++){
 		
 		if point_in_rectangle(mouse_x,mouse_y,_x1,_y1,_x2,_y2){
 			if mouse_check_button_pressed(mb_left){
-				script_execute(get_3d_grid(current_page, i, 2, max_buttons, menu));
+				var scr = script_execute(get_3d_grid(current_page, i, 2, max_buttons, menu));
+				if scr{
+				hovered = false;
+				pressed[i] = false;
+				exit;
+				}
 			}
 			offset_ = wave(-10,10,1,5);
 			pressed[i] = true;
@@ -23,7 +28,6 @@ for (i = 0; i < max_buttons; i++){
 				recY2 = recY1;
 				recY1_ = _y1;
 				recY2_ = _y2;
-				show_debug_message("mouse on button")
 				audio_play_sound(snd_hover,0,false);
 			}
 			recY1 = lerp(recY1,recY1_,.25);
@@ -31,15 +35,19 @@ for (i = 0; i < max_buttons; i++){
 			draw_set_alpha(.2);
 			draw_rectangle(0,recY1,room_width,recY2,false);
 			draw_set_alpha(1);
-		}else if !in_array(pressed,true) && alarm[0] = -1{
+		}else if !in_array(pressed,true){
 			hovered = false;
-			pressed[alarmID] = false;
+			pressed[i] = false;
 		}else{
 			offset_ = 0;
 			pressed[i] = false;
 		}
 		draw_text_color(room_width/2+offset_,yy+i*string_height(str)*1.5+2,str,c_black,c_black,c_black,c_black,1);
 		draw_text(room_width/2+offset_,yy+i*string_height(str)*1.5,str);
+		
+		if get_3d_grid(current_page,i,3,max_buttons,menu) = 1{
+			draw_rectangle(room_width/2+offset_+string_width(str)/2+5,yy+i*string_height(str)*1.5-5+string_height(str)/2,room_width/2+offset_+string_width(str)/2+15,yy+i*string_height(str)*1.5+5+string_height(str)/2,!get_3d_grid(current_page,i,0,max_buttons,menu));
+		}
 	}
 }
 draw_set_halign(fa_left);

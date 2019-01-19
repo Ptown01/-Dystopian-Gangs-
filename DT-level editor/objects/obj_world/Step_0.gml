@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if pressed = true && add = false{
+if pressed = true && add = false && !keyboard_check(vk_space){
 	if coord[0,0] != noone && coord[1,0] != noone && sqID != noone{ // if pressed move the corner
 	square[# coord[0,0],sqID] = mouse_x div TILES;
 	square[# coord[1,0],sqID] = mouse_y div TILES;
@@ -11,10 +11,10 @@ if pressed = true && add = false{
 		ds_grid_resize(square,6,ds_grid_height(square)-1);
 		pressed = false;
 	}
-	if coord[0,0] = 2 && coord[1,0] = 3 && pressed = true{
+	if coord[0,0] = 2 && coord[1,0] = 3 && pressed = true && !keyboard_check(vk_space){
 	square[# 2,sqID] = clamp(square[# 2,sqID],square[# 0,sqID],ds_grid_width(wGrid)-1);
 	square[# 3,sqID] = clamp(square[# 3,sqID],square[# 1,sqID],ds_grid_height(wGrid)-1);
-	}else if pressed = true{
+	}else if pressed = true && !keyboard_check(vk_space){
 	square[# 0,sqID] = clamp(square[# 0,sqID],0,square[# 2,sqID]);
 	square[# 1,sqID] = clamp(square[# 1,sqID],0,square[# 3,sqID]);
 	}
@@ -43,7 +43,7 @@ if pressed = true && add = false{
 			square[# 2,dh] = clamp(square[# 2,dh],square[# 0,dh],ds_grid_width(wGrid)-1);
 			square[# 3,dh] = clamp(square[# 3,dh],square[# 1,dh],ds_grid_height(wGrid)-1);
 			
-		}else if mouse_check_button(mb_left){ //set 2nd corner
+		}else if mouse_check_button(mb_left) && !keyboard_check(vk_space){ //set 2nd corner
 			var dh = ds_grid_height(square);
 			square[# 2,dh-1] = mouse_x div TILES;
 			square[# 3,dh-1] = mouse_y div TILES;

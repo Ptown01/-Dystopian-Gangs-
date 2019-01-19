@@ -1,4 +1,4 @@
-///set_3d_grid(x,y,x,height,grid);
+///set_3d_grid(x,y,z,height,grid);
 ///@param x 
 ///@param y
 ///@param z

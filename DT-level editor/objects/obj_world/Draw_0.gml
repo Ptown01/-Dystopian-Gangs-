@@ -29,9 +29,9 @@ for(i = 0; i < ds_grid_height(square); i++){ //draw_sprites
 	for(i = 0; i < ds_grid_height(square); i++){ // get input to corners of squares
 		for(j = 0; j < 2; j++){        
 					if j = 0{ // check for top left corner
-						if point_in_rectangle(mouse_x,mouse_y,square[# 0+j*2,i]*TILES-5,square[# 1+j*2,i]*TILES-5,square[# 0+j*2,i]*TILES+5,square[# 1+j*2,i]*TILES+5){
+						if point_distance(mouse_x,mouse_y,square[# 0+j*2,i]*TILES,square[# 1+j*2,i]*TILES) < (obj_camera.zoomY)/18{
 							draw_rectangle_color(square[# 0+j*2,i]*TILES-3,square[# 1+j*2,i]*TILES-3,square[# 0+j*2,i]*TILES+3,square[# 1+j*2,i]*TILES+3,c_green,c_green,c_green,c_green,false);
-							if mouse_check_button_pressed(mb_left) && pressed = false{//change square
+							if mouse_check_button_pressed(mb_left) && pressed = false && !keyboard_check(vk_space){//change square
 								coord[0,0] = j*2;
 								coord[1,0] = 1+j*2;
 								sqID = i;
@@ -53,9 +53,9 @@ for(i = 0; i < ds_grid_height(square); i++){ //draw_sprites
 								
 						}
 					}else{ //check for bottom right corner
-						if point_in_rectangle(mouse_x,mouse_y,square[# 0+j*2,i]*TILES+TILES-5,square[# 1+j*2,i]*TILES+TILES-5,square[# 0+j*2,i]*TILES+TILES+5,square[# 1+j*2,i]*TILES+TILES+5){
+						if point_distance(mouse_x,mouse_y,square[# 0+j*2,i]*TILES+TILES,square[# 1+j*2,i]*TILES+TILES) < (obj_camera.zoomY)/18{
 							draw_rectangle_color(square[# 0+j*2,i]*TILES+TILES-3,square[# 1+j*2,i]*TILES+TILES-3,square[# 0+j*2,i]*TILES+TILES+3,square[# 1+j*2,i]*TILES+TILES+3,c_green,c_green,c_green,c_green,false);
-							if mouse_check_button_pressed(mb_left) && pressed = false{
+							if mouse_check_button_pressed(mb_left) && pressed = false && !keyboard_check(vk_space){
 								sqID = i;
 								coord[0,0] = j*2;
 								coord[1,0] = 1+j*2;
