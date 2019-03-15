@@ -1,4 +1,5 @@
-/// @description Init menu
+ /// @description Init menu
+randomize();
 pages = 2;
 max_buttons = 4;
 functions = 4;
@@ -42,4 +43,12 @@ for(i = 0; i < max_buttons;i++){
 	pressed[i] = false;
 }
 
+//effects
+gradSurf = surface_create(room_width,room_height);
+vsyncCalled = false;
+glowX = 0;
+triggered = false;
+timer = 0;
+
 audio_play_sound(snd_menu,0,true);
+

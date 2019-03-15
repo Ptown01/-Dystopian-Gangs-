@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "12da0168-807c-459e-aec0-da21d34fa380",
+            "Value": {
+                "id": "ee1a40ce-028c-447b-90b3-63efca0cf62b",
+                "resourcePath": "scripts\\instance_create\\instance_create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "140d9db0-2427-4212-a91f-f9009b496568",
             "Value": {
                 "id": "15bfcda6-059a-4eeb-94f0-1cfd2dd61412",
@@ -175,6 +183,14 @@
             }
         },
         {
+            "Key": "48053a2d-a36a-4d1a-b341-714257fb34ec",
+            "Value": {
+                "id": "6fa2375f-7657-4033-8242-421d2572d4c1",
+                "resourcePath": "sprites\\spr_glow\\spr_glow.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4baa1a69-ed25-485a-bae1-d072af20b062",
             "Value": {
                 "id": "17439c15-561b-4c2a-8a1c-3c16cd1c3b11",
@@ -231,6 +247,14 @@
             }
         },
         {
+            "Key": "87e90dde-3be9-407e-82be-dc2b933c728b",
+            "Value": {
+                "id": "da83608c-aa2e-46e2-8f5a-00a20e0fec9e",
+                "resourcePath": "sprites\\spr_planet\\spr_planet.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8b1ff753-a246-49aa-a4c9-e3e6324e694a",
             "Value": {
                 "id": "4af7bbac-1681-4dff-bf09-2dcc6d0cd76a",
@@ -284,14 +308,6 @@
                 "id": "e323ac3a-f0fe-4425-b0b0-b5a0b4b57522",
                 "resourcePath": "options\\amazonfire\\options_amazonfire.yy",
                 "resourceType": "GMAmazonFireOptions"
-            }
-        },
-        {
-            "Key": "a22740cd-83f9-4d73-923b-69adcf91874f",
-            "Value": {
-                "id": "95cc43a7-3b16-46f5-b7a0-4ca40b50630c",
-                "resourcePath": "objects\\obs_adastra_part\\obs_adastra_part.yy",
-                "resourceType": "GMObject"
             }
         },
         {
@@ -391,6 +407,14 @@
             }
         },
         {
+            "Key": "e422c022-92b5-4ae4-b8e3-5c9d825a9f8d",
+            "Value": {
+                "id": "985cecaf-d86f-4d46-b8e1-702f0025221b",
+                "resourcePath": "shaders\\sha_fade\\sha_fade.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "e42bf5cc-3f46-4d67-a6d0-a4885a11ac3f",
             "Value": {
                 "id": "db605e3a-cc35-4566-99ce-40ca36f739ca",
@@ -458,7 +482,8 @@
         "0db4dd31-4abd-4c32-9838-23a9957a9b34",
         "b5158875-f22d-47fc-a418-2109b563edb2",
         "291b5230-1866-405a-88cd-7d5a62dfbcd0",
-        "093fa665-779c-4338-bc87-8ac027c880c8"
+        "093fa665-779c-4338-bc87-8ac027c880c8",
+        "12da0168-807c-459e-aec0-da21d34fa380"
     ],
     "tutorial": ""
 }

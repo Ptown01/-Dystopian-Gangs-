@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_adastra",
     "eventList": [
-        
+        {
+            "id": "ad86c767-a55f-4771-9a96-9fe7ca439ead",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "cc454ff0-3705-4603-b52f-413f04582ad4"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

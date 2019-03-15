@@ -32,9 +32,23 @@ for (i = 0; i < max_buttons; i++){
 			}
 			recY1 = lerp(recY1,recY1_,.25);
 			recY2 = lerp(recY2,recY2_,.25);
-			draw_set_alpha(.2);
+			
+			surface_set_target(gradSurf);
+			draw_clear_alpha(c_black,0);
+			
+			shader_set(sha_fade);
+			
 			draw_rectangle(0,recY1,room_width,recY2,false);
-			draw_set_alpha(1);
+			shader_reset();
+			gpu_set_blendmode_ext(bm_dest_alpha,bm_inv_dest_alpha);
+			gpu_set_alphatestenable(true);
+			draw_sprite_ext(spr_glow,0,glowX,recY1+(recY2-recY1)/2,1,1,0,c_white,.3);
+			gpu_set_alphatestenable(false);
+			gpu_set_blendmode(bm_normal);
+			surface_reset_target();
+			
+			draw_surface(gradSurf,0,0);
+			
 		}else if !in_array(pressed,true){
 			hovered = false;
 			pressed[i] = false;
